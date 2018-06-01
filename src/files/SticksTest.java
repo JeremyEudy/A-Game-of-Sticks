@@ -47,8 +47,13 @@ public class SticksTest {
                                     System.out.println("Player 1, select how many sticks to pull. (1-3)");
                                     System.out.print(">");
                                     choiceNum = in.nextInt();
-                                    numSticks = newGame.changeSticks(choiceNum);
-                                    turnNum = newGame.changeTurn() % 2;
+                                    if (choiceNum == 1 || choiceNum == 2 || choiceNum == 3){
+                                        numSticks = newGame.changeSticks(choiceNum);
+                                        turnNum = newGame.changeTurn() % 2;
+                                    }
+                                    else{
+                                        System.out.println("Choice must be in range 1-3!");
+                                    }
                                 } else {
                                     System.out.print("There are ");
                                     System.out.print(newGame.getNumSticks());

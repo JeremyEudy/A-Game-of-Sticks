@@ -12,4 +12,5 @@
 # **************************************************************************** #
 
 cd src/classes/
+clear
 java PickupSticks.SticksTest

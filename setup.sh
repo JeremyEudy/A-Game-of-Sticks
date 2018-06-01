@@ -12,7 +12,11 @@
 # **************************************************************************** #
 
 cd src/
-mkdir classes
+mkdir -p classes
+cd ..
+chmod +x run.sh
+chmod +x rebuild.sh
+cd src/
 javac -d classes/ files/Game.java files/AIProtocol.java && javac -cp classes/ -d classes/ files/SticksTest.java
-echo "Setup complete!"
-echo "Use './run' to launch"
+echo "Setup finished."
+echo "Use './run.sh' to run"

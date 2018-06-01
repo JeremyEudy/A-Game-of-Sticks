@@ -13,7 +13,7 @@
 
 cd src/
 rm -r classes/
-mkdir classes/
+mkdir -p classes/
 javac -d classes/ files/Game.java files/AIProtocol.java && javac -cp classes/ -d classes/ files/SticksTest.java
 echo "Rebuild complete"
 echo "use './run' to launch"

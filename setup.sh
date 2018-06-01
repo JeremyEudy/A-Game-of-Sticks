@@ -15,4 +15,4 @@ cd src/
 mkdir classes
 javac -d classes/ files/Game.java files/AIProtocol.java && javac -cp classes/ -d classes/ files/SticksTest.java
 echo "Setup complete!"
-echo "Use 'java PickupSticks.SticksTest' to launch"
+echo "Use './run' to launch"

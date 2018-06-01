@@ -16,9 +16,9 @@ chmod both .sh files and then execute ```setup.sh``` for first time setup and ``
 ```
 chmod -x setup.sh
 chmod -x rebuild.sh
+chmod -x run.sh
 ./setup.sh
-cd src/classes/
-java PickupSticks.SticksTest
+./run.sh
 ```
 ### Author
 Jeremy Eudy

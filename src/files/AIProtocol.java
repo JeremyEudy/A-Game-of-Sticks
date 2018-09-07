@@ -9,16 +9,13 @@ import java.util.Random;
  */
 public class AIProtocol {
 
-    private ArrayList<ArrayList> buckets = new ArrayList<ArrayList>();
+    private ArrayList<int[]> buckets = new ArrayList<int[]>();
     private ArrayList<ArrayList> record = new ArrayList<ArrayList>();
-    private ArrayList<Integer> options = new ArrayList<Integer>();
+    private int[] options = {1, 2, 3};
     private Random r = new Random();
     private int turn = 0;
 
     public AIProtocol() {
-        options.add(1);
-        options.add(2);
-        options.add(3);
         for (int i = 0; i < 50; i++) {
             buckets.add(options);
         }

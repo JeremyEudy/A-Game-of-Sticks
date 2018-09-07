@@ -88,6 +88,7 @@ public class SticksTest {
                             newGame.setNumSticks(numSticks);
                             int turnNum = newGame.getTurn() % 2;
                             int choiceNum;
+                            int counter = 0;
                             while (numSticks != 0) {
                                 System.out.print("There are ");
                                 System.out.print(newGame.getNumSticks());
@@ -97,6 +98,8 @@ public class SticksTest {
                                 choiceNum = in.nextInt();
                                 numSticks = newGame.changeSticks(choiceNum);
                                 turnNum = newGame.changeTurn() % 2;
+                                counter++;
+                                AI.setTurn(counter);
                                 choiceNum = AI.AIChoice1();
                                 System.out.print("There are ");
                                 System.out.print(newGame.getNumSticks());
@@ -104,6 +107,8 @@ public class SticksTest {
                                 System.out.println("The AI chose: " + choiceNum);
                                 numSticks = newGame.changeSticks(choiceNum);
                                 turnNum = newGame.changeTurn() % 2;
+                                counter++;
+                                AI.setTurn(counter);
                             }
                             if (turnNum == 0) {
                                 System.out.println("Player 1 wins!");
@@ -134,17 +139,18 @@ public class SticksTest {
                             newGame.setNumSticks(100);
                             int turnNum = newGame.getTurn() % 2;
                             int choiceNum;
+                            int counter = 0;
                             while (numSticks > 0) {
+                                counter++;
                                 choiceNum = AI.AIChoice1();
                                 numSticks = newGame.changeSticks(choiceNum);
                                 turnNum = newGame.changeTurn() % 2;
-                                AI.setTurn(turnNum);
-                                newAI.setTurn(turnNum);
+                                AI.setTurn(counter);
+                                counter++;
+                                newAI.setTurn(counter);
                                 choiceNum = newAI.AIChoice2(numSticks);
                                 numSticks = newGame.changeSticks(choiceNum);
                                 turnNum = newGame.changeTurn() % 2;
-                                AI.setTurn(turnNum);
-                                newAI.setTurn(turnNum);
                             }
                             if (turnNum == 0) {
                                 int result = 1;

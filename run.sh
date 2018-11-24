@@ -11,6 +11,7 @@
 #                                                                              #
 # **************************************************************************** #
 
+FILE="$(basename -- $PWD)"
 cd src/classes/
 clear
-java PickupSticks.SticksTest
+java $FILE.$1
